@@ -1,0 +1,79 @@
+object fmResizeImage: TfmResizeImage
+  Left = 386
+  Height = 277
+  Top = 177
+  Width = 403
+  BorderStyle = bsDialog
+  Caption = 'Resize picture'
+  ClientHeight = 277
+  ClientWidth = 403
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  ShowInTaskBar = stNever
+  LCLVersion = '1.0.8.0'
+  object rgResizeImage: TRadioGroup
+    Left = 32
+    Height = 144
+    Top = 24
+    Width = 341
+    AutoFill = True
+    Caption = 'Resize picture'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 3
+    ClientHeight = 127
+    ClientWidth = 337
+    Columns = 3
+    ItemIndex = 5
+    Items.Strings = (
+      '5%'
+      '10%'
+      '30%'
+      '60%'
+      '80%'
+      '100%'
+      '120%'
+      '140%'
+      '160%'
+      '180%'
+      '200%'
+      '300%'
+    )
+    OnClick = FormShow
+    TabOrder = 0
+  end
+  object bnSubCommOK: TButton
+    Left = 149
+    Height = 31
+    Top = 224
+    Width = 101
+    Anchors = [akRight, akBottom]
+    Caption = 'OK'
+    ModalResult = 1
+    TabOrder = 1
+  end
+  object bnSubCommCancel: TButton
+    Left = 271
+    Height = 31
+    Top = 224
+    Width = 101
+    Anchors = [akRight, akBottom]
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 2
+  end
+  object lbSize: TLabel
+    Left = 32
+    Height = 16
+    Top = 176
+    Width = 77
+    Caption = 'Picture size: '
+    ParentColor = False
+  end
+end
